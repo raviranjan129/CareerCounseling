@@ -1,12 +1,12 @@
+import React from 'react'
 
+const Home = () => {
+  return (
+    <div className='h-full w-full bg-green-100 '>
+    <h1 className="text-4xl font-bold text-black">Admission & Career Counseling Made Easy</h1>
 
-export const Home=()=>{
-
-    return (
-        <div className="w-full h-full bg-gray-100">
-       
-        <h1>Admission & Career Counseling Made Easy</h1>
-
-        </div>
-    )
+    </div>
+  )
 }
+
+export default Home

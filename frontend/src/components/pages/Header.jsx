@@ -1,20 +1,21 @@
-// import { BellIcon, Calendar1Icon, MessageSquareIcon, SearchIcon } from "lucide-react";
-
+import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Header = () => {
+    const navigate=useNavigate();
   return (
-    <div className="w-full flex h-[70px] bg-red-100 items-center">
-      <div className="w-[50%] ml-2">logo</div>
-      <div className="w-[50%] flex justify-around ">
-      <button className="font-semibold">Home</button>
-      <button className="font-semibold" >About Us</button>
-      <button className="font-semibold">Services</button>
-      <button className="font-semibold">Book a Call</button>
-      <button  className="font-semibold">Contact</button>
-      
+    <div className='flex w-full font-bold items-center bg-red-400 h-[70px]'>
+      <div className='w-1/2 ml-10'>logo</div>
+      <div className='w-1/2 flex justify-around'>
+          <button className='cursor-pointer' onClick={()=>navigate('/')}>Home</button>
+          <button className='cursor-pointer' onClick={()=>navigate('/bookcall')}>BookCall</button>
+          <button className='cursor-pointer' onClick={() => navigate("/contact")}>Contact-Us</button>
+          <button className='cursor-pointer' onClick={() => navigate("/services")}>Services</button>
+          <button className='cursor-pointer' onClick={() => navigate("/aboutus")}>About-Us</button>
+          
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

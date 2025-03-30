@@ -1,14 +1,113 @@
+import React, { useState } from "react";
+import useBookCounseling from "../../hooks/api/usebookcounseling";
 
-import React from 'react'
 
-export default function BookCall() {
+const BookCall = () => {
+  const { mutate: bookCounseling, isLoading } = useBookCounseling();
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    dateTime: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    bookCounseling(formData); // Trigger the booking API call
+  };
+
   return (
-    <div className='w-full'>
+    <div >
+     
+      <form
+      onSubmit={handleSubmit}
+      className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg overflow-y-auto"
+    >
+     
 
-        <form >
-       
-        </form>
-       
+      {/* Name */}
+      <div className="mb-4">
+        <label className="block text-gray-700 font-semibold mb-1">Name</label>
+        <input
+          type="text"
+          name="name"
+          placeholder="Enter your name"
+          onChange={handleChange}
+          required
+          className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+        />
+      </div>
+
+      {/* Email */}
+      <div className="mb-4">
+        <label className="block text-gray-700 font-semibold mb-1">Email</label>
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter your email"
+          onChange={handleChange}
+          required
+          className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+        />
+      </div>
+
+      {/* Phone */}
+      <div className="mb-4">
+        <label className="block text-gray-700 font-semibold mb-1">Phone</label>
+        <input
+          type="tel"
+          name="phone"
+          placeholder="Enter your phone number"
+          onChange={handleChange}
+          required
+          className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+        />
+      </div>
+
+      {/* Date & Time */}
+      <div className="mb-4">
+        <label className="block text-gray-700 font-semibold mb-1">
+          Preferred Date & Time
+        </label>
+        <input
+          type="datetime-local"
+          name="dateTime"
+          onChange={handleChange}
+          required
+          className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+        />
+      </div>
+
+      {/* Message */}
+      <div className="mb-4">
+        <label className="block text-gray-700 font-semibold mb-1">Message</label>
+        <textarea
+          name="message"
+          placeholder="Write your message"
+          onChange={handleChange}
+          className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+        ></textarea>
+      </div>
+
+      {/* Submit Button */}
+      <button
+        type="submit"
+        disabled={isLoading}
+        className={`w-full bg-blue-500 text-white font-semibold py-3 rounded-md transition-all ${
+          isLoading ? "opacity-50 cursor-not-allowed" : "hover:bg-blue-600"
+        }`}
+      >
+        {isLoading ? "Booking..." : "Book Now"}
+      </button>
+    </form>
     </div>
-  )
-}
+  );
+};
+
+export default BookCall;
