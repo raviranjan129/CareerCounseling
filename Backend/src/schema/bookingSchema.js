@@ -11,7 +11,7 @@ const bookingSchema=new mongoose.Schema(
     email: {
         type: String,
         required: [true, "Email is required"],
-        unique: true,
+        
         minLength: 6,
         trim: true,
         validate: {
