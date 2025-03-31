@@ -8,7 +8,7 @@ const Header = () => {
       <div className='w-1/2 ml-10'>logo</div>
       <div className='w-1/2 flex justify-around '>
           <button className='cursor-pointer ' onClick={()=>navigate('/')}>Home</button>
-          <button className='cursor-pointer' onClick={()=>navigate('/bookcall')}>BookCall</button>
+          <button className='cursor-pointer' onClick={()=>navigate('/bookcall')}>BookCounseling</button>
           <button className='cursor-pointer' onClick={() => navigate("/contact")}>Contact-Us</button>
           <button className='cursor-pointer' onClick={() => navigate("/services")}>Services</button>
           <button className='cursor-pointer' onClick={() => navigate("/aboutus")}>About-Us</button>
