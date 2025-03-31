@@ -3,6 +3,8 @@ import { StatusCodes } from "http-status-codes";
 
 export const createBookingController=async(req,res)=>{
     try {
+
+        console.log('Received booking request :',req.body)
         const Booking=await createBooking({
             name:req.body.name,
             email:req.body.email,

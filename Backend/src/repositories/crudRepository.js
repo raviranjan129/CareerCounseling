@@ -23,13 +23,6 @@ return newDoc;
             const updatedDoc=await model.findByIdAndUpdate(id,data,{new:true});
             return updatedDoc;
         },
-        deleteMany:async function (modelIds) {
-            const response = await model.deleteMany({
-                _id:{
-                    $in:modelIds
-                }
-            });
-            return response;
-        }
+        
     }
 }
