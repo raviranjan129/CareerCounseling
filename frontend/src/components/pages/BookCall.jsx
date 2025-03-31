@@ -19,7 +19,17 @@ const BookCall = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    bookCounseling(formData); // Trigger the booking API call
+    bookCounseling(formData,{
+        onSuccess:()=>{
+            setFormData({
+                name:"",
+                email:"",
+                phone:"",
+                dateTime:"",
+                message:"",
+            })
+        }
+    }); 
   };
 
   return (
@@ -37,6 +47,7 @@ const BookCall = () => {
         <input
           type="text"
           name="name"
+          value={formData.name} 
           placeholder="Enter your name"
           onChange={handleChange}
           required
@@ -50,6 +61,7 @@ const BookCall = () => {
         <input
           type="email"
           name="email"
+          value={formData.email} 
           placeholder="Enter your email"
           onChange={handleChange}
           required
@@ -63,6 +75,7 @@ const BookCall = () => {
         <input
           type="tel"
           name="phone"
+          value={formData.phone} 
           placeholder="Enter your phone number"
           onChange={handleChange}
           required
@@ -78,6 +91,7 @@ const BookCall = () => {
         <input
           type="datetime-local"
           name="dateTime"
+          value={formData.dateTime} 
           onChange={handleChange}
           required
           className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
@@ -89,6 +103,7 @@ const BookCall = () => {
         <label className="block text-gray-700 font-semibold mb-1">Message</label>
         <textarea
           name="message"
+          value={formData.message} 
           placeholder="Write your message"
           onChange={handleChange}
           className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
