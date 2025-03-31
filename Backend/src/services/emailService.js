@@ -1,9 +1,10 @@
 import transporter from "../config/mailConfig.js";
+import { MAIL_ID } from "../config/serverConfig.js";
 
 export const sendBookingConfirmationEmail = async (email, name) => {
   try {
     const mailOptions = {
-      from: process.env.MAIL_ID, 
+      from:MAIL_ID, 
       to: email,
       subject: "Counseling Booking Confirmation",
       html: `<h2>Dear ${name},</h2>
