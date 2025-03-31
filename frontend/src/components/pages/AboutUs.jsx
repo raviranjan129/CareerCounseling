@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import Footer from './Footer';
 
 const AboutUs = () => {
     const navigate=useNavigate();
@@ -107,6 +108,8 @@ const AboutUs = () => {
       Book a Free Career Counseling Session
     </button>
   </div>
+
+  
 </div>
 
    </>
