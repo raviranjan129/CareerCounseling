@@ -7,7 +7,7 @@ import AppRoutes from './Routes';
 const App = () => {
   const queryClient=new QueryClient();
   return (
-    <div className='h-screen overflow-y-hidden w-full '>
+    <div className='h-screen  w-full '>
       <QueryClientProvider client={queryClient} >
         <AppRoutes/>
       </QueryClientProvider>
