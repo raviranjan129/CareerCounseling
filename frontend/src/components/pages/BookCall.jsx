@@ -33,7 +33,7 @@ const BookCall = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-orange-100 via-red-200 to-pink-300"
+    <div className="bg-gradient-to-r from-orange-100 via-red-200 to-pink-300 h-screen"
 
     >
      
