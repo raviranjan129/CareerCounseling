@@ -14,13 +14,13 @@ const Footer = () => {
               <div className="w-full md:w-1/3 text-center md:text-left">
                <h3 className="text-lg md:text-xl font-semibold text-white mb-4">Contact Us</h3>
                <div className="flex justify-center md:justify-start space-x-6">
-                 <a  className="text-2xl md:text-3xl text-white hover:text-green-100 transition-colors duration-300">
+                 <a  className="text-2xl md:text-3xl text-white hover:text-green-100 transition-colors duration-300 cursor-pointer">
                         <MdAttachEmail />
                 </a>
-                 <a  className="text-2xl md:text-3xl text-white hover:text-green-100 transition-colors duration-300">
+                 <a  className="text-2xl md:text-3xl text-white hover:text-green-100 transition-colors duration-300 cursor-pointer">
                                 <FcCallback />
                             </a>
-                    <a  className="text-2xl md:text-3xl text-white hover:text-green-100 transition-colors duration-300">
+                    <a  className="text-2xl md:text-3xl text-white hover:text-green-100 transition-colors duration-300 cursor-pointer">
                          <FcHome />
                       </a>
                   </div>
@@ -30,13 +30,13 @@ const Footer = () => {
    <div className="w-full md:w-1/3 text-center">
           <h3 className="text-lg md:text-xl font-semibold text-white mb-4">Follow Us</h3>
              <div className="flex justify-center space-x-6">
-                  <a  className="text-2xl md:text-3xl text-white hover:text-green-100 transition-colors duration-300">
+                  <a  className="text-2xl md:text-3xl text-white hover:text-green-100 transition-colors duration-300 cursor-pointer">
                         <FaFacebook />
                 </a>
-                 <a  className="text-2xl md:text-3xl text-white hover:text-green-100 transition-colors duration-300">
+                 <a  className="text-2xl md:text-3xl text-white hover:text-green-100 transition-colors duration-300 cursor-pointer">
                         <FaLinkedin />
                 </a>
-            <a  className="text-2xl md:text-3xl text-white hover:text-green-100 transition-colors duration-300">
+            <a  className="text-2xl md:text-3xl text-white hover:text-green-100 transition-colors duration-300 cursor-pointer">
              <FaInstagram />
                </a>
           </div>
@@ -48,25 +48,25 @@ const Footer = () => {
       <div className="flex flex-wrap justify-center md:justify-end space-x-4 md:space-x-6">
                <button 
               onClick={() => navigate('/')}
-                className="text-white hover:text-green-100 transition-colors duration-300 text-sm md:text-base"
+                className="text-white hover:text-green-100 transition-colors duration-300 text-sm md:text-base cursor-pointer"
               >
                  Home
       </button>
      <button 
          onClick={() => navigate('/bookcall')}
-             className="text-white hover:text-green-100 transition-colors duration-300 text-sm md:text-base"
+             className="text-white hover:text-green-100 transition-colors duration-300 text-sm md:text-base cursor-pointer"
                >
                    Book Counseling
              </button>
              <button 
                     onClick={() => navigate("/contact")}
-                    className="text-white hover:text-green-100 transition-colors duration-300 text-sm md:text-base"
+                    className="text-white hover:text-green-100 transition-colors duration-300 text-sm md:text-base cursor-pointer"
                       >
                           Contact Us
               </button>
               <button 
                     onClick={() => navigate("/services")}
-                       className="text-white hover:text-green-100 transition-colors duration-300 text-sm md:text-base"
+                       className="text-white hover:text-green-100 transition-colors duration-300 text-sm md:text-base cursor-pointer"
                        >
                                 Services
                            </button>
@@ -75,11 +75,7 @@ const Footer = () => {
         </div>
 
                 
-     <div className="mt-6 md:mt-8 pt-4 border-t border-white/20 text-center">
-           <p className="text-white text-sm md:text-base">
-              © {new Date().getFullYear()} Career Counseling. All rights reserved.
-             </p>
-               </div>
+    
          </div>
      </footer>
     )

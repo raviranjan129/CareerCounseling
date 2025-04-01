@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import useBookCounseling from "../../hooks/api/usebookcounseling";
+import Footer from "./Footer";
 
 
 const BookCall = () => {
@@ -33,13 +34,13 @@ const BookCall = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-orange-100 via-red-200 to-pink-300 h-screen"
+    <div className="bg-gray-300 to-pink-300 "
 
     >
      
       <form
       onSubmit={handleSubmit}
-      className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg overflow-y-auto"
+      className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg "
     >
      <h1 className="text-4xl mb-4">Book Your Conseling!! </h1>
 
@@ -123,6 +124,8 @@ const BookCall = () => {
         {isLoading ? "Booking..." : "Book Now"}
       </button>
     </form>
+
+    <Footer/>
     </div>
   );
 };

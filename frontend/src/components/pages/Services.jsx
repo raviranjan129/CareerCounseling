@@ -6,7 +6,7 @@ const Services = () => {
     return (
         <>
             {/* our service section like banner type  */}
- <div className="relative w-full bg-gradient-to-r from-green-100 via-teal-200 to-green-400 ">
+ <div className="relative w-full  ">
             <div className="container mx-auto px-4 py-4 md:py-6">
        <div className="flex flex-col items-center justify-center text-center">
                         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray-700 font-bold hover:underline transition-all duration-300">
@@ -23,7 +23,7 @@ const Services = () => {
 
            {/** */}
 
-        <div className="bg-gradient-to-r from-green-100 via-teal-200 to-green-400 min-h-screen py-8 px-4 md:px-8">
+        <div className=" min-h-screen py-8 px-4 md:px-8">
                 {/* Admission Guidance Section */}
                 <div className="flex flex-col lg:flex-row gap-8 md:gap-12 py-8 md:py-12 items-center">
        <div className="w-full lg:w-1/2">
@@ -64,7 +64,7 @@ const Services = () => {
             Scholarship Assistance
       </h2>
       <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
-    At <strong>Career Counseling</strong>, we believe financial constraints should never hinder a student's education.  
+    At <strong> MINDBLOWING</strong>, we believe financial constraints should never hinder a student's education.  
       Our Scholarship Assistance program helps students explore, apply for, and secure the best scholarship  
       opportunities available based on their academic achievements, financial background, and career aspirations.
     </p>
@@ -98,7 +98,7 @@ const Services = () => {
              Resume Building & Interview Prep
    </h2>
       <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
-        At <strong>Career Counseling</strong>, we empower students and professionals to 
+        At <strong> MINDBLOWING</strong>, we empower students and professionals to 
     <strong> stand out in the competitive job market </strong> through expertly crafted resumes and interview coaching.
       </p>
        <div className="space-y-6">

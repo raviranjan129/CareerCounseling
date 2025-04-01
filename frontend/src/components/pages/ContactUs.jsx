@@ -33,13 +33,16 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-orange-100 via-red-200 to-pink-300 h-screen"
+
+
+
+    <div className=" h-screen mt-20"
 
     >
      
       <form
       onSubmit={handleSubmit}
-      className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg overflow-y-auto "
+      className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg overflow-y-auto  "
     >
      <h1 className="text-4xl ml-10 mb-4">Contact Us </h1>
 
@@ -112,6 +115,8 @@ const ContactUs = () => {
       </button>
     </form>
     </div>
+
+    
   );
 };
 

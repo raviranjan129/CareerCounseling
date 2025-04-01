@@ -6,17 +6,17 @@ const AboutUs = () => {
     const navigate=useNavigate();
   return (
    <>
-     <div className="flex justify-center items-center h-[60px] w-full bg-gradient-to-r from-green-100 via-teal-200 to-green-400 shadow-lg">
+     <div className="flex justify-center items-center h-[60px] w-full  ">
         <h1 className="text-5xl text-gray-700 font-semibold hover:underline transition-all duration-300">
           About-Us
         </h1>
       </div>
 
-      <div className="bg-gradient-to-r from-green-100 via-teal-200 to-green-400 py-16 px-10">
+      <div className=" py-16 px-10">
   <div className="max-w-6xl mx-auto text-center">
     
     <p className="text-xl text-gray-700 leading-relaxed">
-      At <strong>Career Counseling</strong>, we are passionate about helping students and professionals  
+      At <strong>Mind Blowing</strong>, we are passionate about helping students and professionals  
       discover their true potential and build successful careers. With expert guidance,  
       personalized mentoring, and industry insights, we empower individuals to make confident career choices  
       and achieve their dreams.
@@ -109,9 +109,10 @@ const AboutUs = () => {
     </button>
   </div>
 
-  
+
 </div>
 
+<Footer/>
    </>
   )
 }
